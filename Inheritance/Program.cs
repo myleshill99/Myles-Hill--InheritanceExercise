@@ -1,39 +1,28 @@
 ﻿using System;
-
 namespace Inheritance
 {
-    class Program
+    public  class Program
     {
-        static void Main(string[] args)
-        {
-            // TODO Be sure to follow best practice when creating your classes
+       public static void Main(string[] args) 
+       {
+            var bird = new Bird
+            {
+                WingColor = "Blue",
+                CanFly = true,
+                BackLength = 10,
+                WillMigrate = true
+            };
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
+            var reptile = new Reptile
+            {   
+                HasWebbedFeet = true,
+                CanCamoflauge = false,
+                IsAquatic = false,
+                NumberOfScales = 100
+            };
 
-
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
-
-
-
-
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
-
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
-        }
+            Console.WriteLine($"I'm a bird, I {(bird.CanFly ? "can fly" : "cant fly")}, my wing color is {bird.WingColor}. My back length is {bird.BackLength}. I {(bird.WillMigrate ? "will migrate" : "will not migrate")}");
+            Console.WriteLine($"I'm a reptile, I {(reptile.HasWebbedFeet ? "have webbed feet" : "dont have webbed feet")}. I {(reptile.CanCamoflauge ? "can camoflauge" : "can't camoflauge")}. I am {(reptile.IsAquatic ? "" : "not")} aquatic. I have {reptile.NumberOfScales} scales.";
+       }
     }
 }
